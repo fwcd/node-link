@@ -136,6 +136,8 @@ Napi::Function NodeLink::GetClass(Napi::Env env) {
     return DefineClass(env, "NodeLink", {
         NodeLink::InstanceMethod("getSessionInfoCurrent", &NodeLink::GetSessionInfoCurrent),
         NodeLink::InstanceMethod("enable", &NodeLink::Enable),
+        NodeLink::InstanceMethod("requestBeat", &NodeLink::RequestBeat),
+        NodeLink::InstanceMethod("forceBeat", &NodeLink::ForceBeat),
         NodeLink::InstanceMethod("setTempo", &NodeLink::SetTempo),
         NodeLink::InstanceMethod("setIsPlaying", &NodeLink::SetIsPlaying),
         NodeLink::InstanceMethod("enableStartStopSync", &NodeLink::EnableStartStopSync)
